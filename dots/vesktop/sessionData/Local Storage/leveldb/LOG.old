@@ -1,0 +1,15 @@
+2026/07/29-22:18:04.053 3425 Reusing MANIFEST /home/polla/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2026/07/29-22:18:04.074 3425 Recovering log #135
+2026/07/29-22:18:04.074 3425 Reusing old log /home/polla/.config/vesktop/sessionData/Local Storage/leveldb/000135.log 
+2026/07/29-22:23:15.129 3400 Level-0 table #139: started
+2026/07/29-22:23:15.131 3400 Level-0 table #139: 52893 bytes OK
+2026/07/29-22:23:15.133 3400 Delete type=0 #135
+2026/07/29-22:23:15.133 3400 Compacting 4@0 + 1@1 files
+2026/07/29-22:23:15.137 3400 Generated table #140@0: 32 keys, 52868 bytes
+2026/07/29-22:23:15.137 3400 Compacted 4@0 + 1@1 files => 52868 bytes
+2026/07/29-22:23:15.139 3400 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/07/29-22:23:15.139 3400 Delete type=2 #139
+2026/07/29-22:23:15.139 3400 Delete type=2 #136
+2026/07/29-22:23:15.139 3400 Delete type=2 #132
+2026/07/29-22:23:15.139 3400 Delete type=2 #130
+2026/07/29-22:23:15.139 3400 Delete type=2 #134

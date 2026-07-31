@@ -1,0 +1,51 @@
+theme = TokyoNight Moon
+
+background = #02070D
+foreground = #EAF2FF
+cursor-color = #FF3B3B
+cursor-text = #EAF2FF
+
+font-family = "JetBrainsMono Nerd Font"
+confirm-close-surface = false
+window-decoration = false
+adjust-cell-height = 6
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+# 256-color palette (0-15). Ghostty uses `palette = N=#RRGGBB`
+palette = 0=#000000
+palette = 1=#FF3B3B
+palette = 2=#B8C7D9
+palette = 3=#E6F1FF
+palette = 4=#9DB7D6
+palette = 5=#FF3B3B
+palette = 6=#FFFFFF
+palette = 7=#EAF2FF
+palette = 8=#0A0F18
+palette = 9=#FF5A5A
+palette = 10=#D7E4F3
+palette = 11=#FFFFFF
+palette = 12=#B9D0EE
+palette = 13=#FF5A5A
+palette = 14=#FFFFFF
+palette = 15=#FFFFFF
+
+window-padding-x = 7
+window-padding-y = 7
+window-width = 140
+window-height = 35
+window-save-state = always
+
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+l=goto_split:right
+
+keybind = super+ctrl+down=resize_split:down,100
+keybind = super+ctrl+left=resize_split:left,100
+keybind = super+ctrl+up=resize_split:up,100
+keybind = super+ctrl+right=resize_split:right,100
+window-width = 100
+window-height = 30
+

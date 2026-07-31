@@ -1,0 +1,6 @@
+[Default Applications]
+x-scheme-handler/discord=vesktop.desktop
+application/x-zerosize=nvim.desktop
+
+[Added Associations]
+application/x-zerosize=nvim.desktop;

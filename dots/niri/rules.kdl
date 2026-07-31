@@ -1,0 +1,71 @@
+// Opacity for inactive windows
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+// Background effect for all windows
+window-rule {
+    match app-id=r#".*"#
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+// Opacity and background effect for specific applications
+window-rule {
+    match app-id=r#"thunar"#
+    match app-id=r#"kitty"#
+    opacity 0.8
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+window-rule {
+    match app-id=r#"thunar"#
+    opacity 0.8
+
+    background-effect {
+        xray true
+        blur true
+        noise 0.05
+        saturation 2
+    }
+}
+
+window-rule {
+    match app-id=r#"thunar"#
+    default-column-width { proportion 0.65; }
+}
+
+window-rule {
+    match app-id=r#"librewolf$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"librewolf"#
+    open-maximized true
+}
+window-rule {
+    match app-id=r#"vesktop"#
+    open-maximized true
+}
+window-rule {
+    match app-id=r#"Spotify"#
+    open-maximized true
+}
+
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
