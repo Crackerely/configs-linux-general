@@ -1,0 +1,18 @@
+# Historial
+HISTSIZE=1000
+SAVEHIST=2000
+HISTFILE=~/.zsh_history
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+
+# Prompt estilo Kali 
+setopt PROMPT_SUBST
+PROMPT=$'%{\e[36m%}┌──(%{\e[34m%}%n%{\e[37m%}@%{\e[34m%}%m%{\e[36m%})-[%{\e[37m%}%~%{\e[36m%}]\n%{\e[36m%}└─%{\e[34m%}\$ %{\e[0m%}'
+
+# Bienvenida
+fastfetch
+echo hallo bitch
+nixos-update() {
+    cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake . && sudo nix-collect-garbage --delete-older-than 7d && cd -
+}
