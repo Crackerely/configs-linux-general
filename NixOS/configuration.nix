@@ -113,10 +113,16 @@ systemd.services.greetd.serviceConfig = {
   git
   neovim
   fastfetch
+  lavat
+  sl
+  cowsay
+  prismlauncher
+  python3
   thunar
   flatpak
   pkgs.librewolf
   coreutils
+  gnused
   gnugrep
   xwayland-satellite
   xwayland
@@ -129,6 +135,11 @@ systemd.services.greetd.serviceConfig = {
   ffmpeg
   pipewire
   wireplumber
+  mpv
+  yt-dlp
+  curl
+  fzf
+  patch
   vesktop
   kitty
   ];
