@@ -79,10 +79,6 @@
         "widgets": {
             "center": [
                 {
-                    "iconColor": "none",
-                    "id": "WallpaperSelector"
-                },
-                {
                     "characterCount": 2,
                     "colorizeIcons": false,
                     "emptyColor": "none",
@@ -157,7 +153,7 @@
                     "colorName": "primary",
                     "hideWhenIdle": false,
                     "id": "AudioVisualizer",
-                    "width": 327
+                    "width": 329
                 }
             ],
             "right": [
@@ -165,7 +161,7 @@
                     "colorizeIcons": false,
                     "hideMode": "hidden",
                     "id": "ActiveWindow",
-                    "maxWidth": 130,
+                    "maxWidth": 128,
                     "scrollingMode": "hover",
                     "showIcon": true,
                     "showText": true,
@@ -180,17 +176,6 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": true
-                },
-                {
-                    "blacklist": [
-                    ],
-                    "chevronColor": "none",
-                    "colorizeIcons": false,
-                    "drawerEnabled": true,
-                    "hidePassive": false,
-                    "id": "Tray",
-                    "pinned": [
-                    ]
                 },
                 {
                     "displayMode": "onhover",
@@ -228,6 +213,13 @@
                     "textColor": "none"
                 },
                 {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "KeyboardLayout",
+                    "showIcon": true,
+                    "textColor": "none"
+                },
+                {
                     "defaultSettings": {
                         "autoMount": false,
                         "fileBrowser": "yazi",
@@ -238,16 +230,6 @@
                         "terminalCommand": "kitty"
                     },
                     "id": "plugin:usb-drive-manager"
-                },
-                {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "alien-filled",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
                 }
             ]
         }
@@ -281,7 +263,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Noctalia (default)",
+        "predefinedScheme": "Kanagawa",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -347,10 +329,15 @@
         }
     },
     "desktopWidgets": {
-        "enabled": false,
-        "gridSnap": false,
+        "enabled": true,
+        "gridSnap": true,
         "gridSnapScale": false,
         "monitorWidgets": [
+            {
+                "name": "eDP-1",
+                "widgets": [
+                ]
+            }
         ],
         "overviewEnabled": true
     },
@@ -393,7 +380,7 @@
         "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
-        "avatarImage": "/home/polla/.face",
+        "avatarImage": "/home/polla/Pictures/screenshot_2026-07-26_01-26-00.png",
         "boxRadiusRatio": 1,
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
@@ -448,7 +435,7 @@
         "showChangelogOnStartup": true,
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
-        "showSessionButtonsOnLockScreen": true,
+        "showSessionButtonsOnLockScreen": false,
         "smoothScrollEnabled": true,
         "telemetryEnabled": false
     },
@@ -482,9 +469,9 @@
         "analogClockInCalendar": false,
         "autoLocate": false,
         "firstDayOfWeek": -1,
-        "hideWeatherCityName": false,
+        "hideWeatherCityName": true,
         "hideWeatherTimezone": false,
-        "name": "",
+        "name": "tegucigalpa",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -505,13 +492,13 @@
         "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
-        "autoSchedule": true,
+        "autoSchedule": false,
         "dayTemp": "6500",
-        "enabled": false,
+        "enabled": true,
         "forced": false,
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
-        "nightTemp": "4000"
+        "nightTemp": "4500"
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
@@ -570,44 +557,65 @@
     "sessionMenu": {
         "countdownDuration": 10000,
         "enableCountdown": true,
-        "largeButtonsLayout": "single-row",
-        "largeButtonsStyle": true,
+        "largeButtonsLayout": "grid",
+        "largeButtonsStyle": false,
         "position": "center",
         "powerOptions": [
             {
                 "action": "lock",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "1"
             },
             {
                 "action": "suspend",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "2"
             },
             {
                 "action": "hibernate",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "3"
             },
             {
                 "action": "reboot",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "4"
             },
             {
-                "action": "logout",
+                "action": "rebootToUefi",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "5"
             },
             {
+                "action": "logout",
+                "command": "",
+                "countdownEnabled": false,
+                "enabled": false,
+                "keybind": "5"
+            },
+            {
                 "action": "shutdown",
+                "command": "",
+                "countdownEnabled": false,
                 "enabled": true,
                 "keybind": "6"
             },
             {
-                "action": "rebootToUefi",
-                "enabled": true,
-                "keybind": "7"
+                "action": "userspaceReboot",
+                "command": "",
+                "countdownEnabled": false,
+                "enabled": false,
+                "keybind": ""
             }
         ],
         "showHeader": true,
@@ -665,7 +673,7 @@
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
-        "hideWallpaperFilenames": false,
+        "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
@@ -697,7 +705,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "armpit",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
