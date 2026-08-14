@@ -58,11 +58,14 @@
     LC_TIME = "es_HN.UTF-8";
   };
 #services
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-  };
+#pipewire
+services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  alsa.support32Bit = true;
+  pulse.enable = true;
+  wireplumber.enable = true;
+};
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "latam";
@@ -116,7 +119,6 @@ systemd.services.greetd.serviceConfig = {
   lavat
   sl
   cowsay
-  prismlauncher
   python3
   thunar
   flatpak
@@ -133,8 +135,6 @@ systemd.services.greetd.serviceConfig = {
   pavucontrol
   glib
   ffmpeg
-  pipewire
-  wireplumber
   mpv
   yt-dlp
   curl
@@ -203,6 +203,8 @@ in
     enable = true;
     enable32Bit = true;
     };
+    hardware.pulseaudio.enable = false;
+
     services.flatpak.enable = true;
     systemd.services.flatpak-repo = {
   wantedBy = [ "multi-user.target" ];
@@ -250,6 +252,7 @@ services.xserver.enable = false; # asegúrate de no tener esto si usas Wayland p
 programs.dconf.enable = true; # vital para que los temas y apps gráficas no esperen timeouts de dbus
 security.rtkit.enable = true; # prioridad de audio y hilos para que el sistema no se trabe en procesos gráficos
 services.dbus.implementation = "broker"; # reemplaza dbus-daemon por dbus-broker (mucho más rápido y eficiente)
+
 }
 
 
