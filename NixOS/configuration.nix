@@ -68,8 +68,9 @@ services.pipewire = {
 };
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "latam";
+    layout = "latam,us";
     variant = "nodeadkeys";
+    options = "grp:alt_shift_toggle";
   };
 #services custom
  services.greetd = {
