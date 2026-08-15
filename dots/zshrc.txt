@@ -16,3 +16,8 @@ echo hallo bitch
 nixos-update() {
     cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake . && sudo nix-collect-garbage --delete-older-than 7d && cd -
 };
+
+badapple() {
+    cd ~/Projects/badapple && python3 apple.py && cd -
+};
+
