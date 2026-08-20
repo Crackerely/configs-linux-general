@@ -20,6 +20,11 @@ binds {
     Mod+Shift+W { spawn "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
 
     Mod+Shift+C { spawn "noctalia-shell" "ipc" "call" "calendar" "toggle"; }
+// restart noctalia since ive noticed some glitches after using it a long time
+  //first 
+  Mod+Alt+N   { spawn "sh" "-c" "pkill -f quickshell"; }
+  //second
+  Mod+Alt+M   { spawn "sh" "-c" "noctalia-shell"; }
 
 //if u use swaylock
        Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
